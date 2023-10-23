@@ -8,10 +8,11 @@
     "JavaScript",
     "Canister"
   ],
+  "type": "module",
   "scripts": {
     "build": "webpack",
     "prebuild": "dfx generate",
-    "start": "webpack serve --mode development --env development",
+    "start": "node src/client/script.js",
     "deploy:local": "dfx deploy --network=local",
     "deploy:ic": "dfx deploy --network=ic",
     "generate": "dfx generate connection_refused_backend"
@@ -25,7 +26,7 @@
     "assert": "2.0.0",
     "buffer": "6.0.3",
     "copy-webpack-plugin": "^11.0.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.3.1",
     "events": "3.3.0",
     "html-webpack-plugin": "5.5.0",
     "process": "0.11.10",
