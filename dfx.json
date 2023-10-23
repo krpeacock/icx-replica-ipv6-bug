@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "connection_refused_backend": {
+      "main": "src/connection_refused_backend/main.mo",
+      "type": "motoko"
+    },
+    "connection_refused_frontend": {
+      "dependencies": [
+        "connection_refused_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/connection_refused_frontend/src/index.html"
+      },
+      "source": [
+        "src/connection_refused_frontend/assets",
+        "dist/connection_refused_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
